@@ -1,3 +1,11 @@
+user = User.create!([
+    {
+      first_name: "Liz",
+      last_name: "Burke",
+      username: "lizburkechi",
+      password_digest: "liz1"
+    }
+  ])
 resources = Resource.create!([
     {
       title: "Rails Guides",
@@ -72,27 +80,18 @@ resources = Resource.create!([
     }
   ])
 
-  users = User.create!([
-    {
-      first_name: "Liz",
-      last_name: "Burke",
-      username: "lizburkechi",
-      password: "liz1"
-    }
-  ])
-
   likes = Like.create!([
       {
         user_id: 1,
-        resource_id: resources.first
+        resource_id: 1
       },
       {
         user_id: 1,
-        resource_id: resources.second
+        resource_id: 2
       },
       {
         user_id: 1,
-        resource_id: resources.fourth
+        resource_id: 3
       },
   ])
 
